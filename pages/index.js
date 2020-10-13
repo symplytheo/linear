@@ -1,65 +1,84 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Layout from '../src/components/layout';
+import { Box, Button, Container, Typography } from '@material-ui/core';
+// Icons
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import LanguageIcon from '@material-ui/icons/Language'
+// Page Components
+import Title from '../src/components/Title.js';
+import Features from '../src/components/home/Features'
+import Testimonials from '../src/components/home/Testimonials.js'
+import Integrations from '../src/components/home/Integrations.js';
 
-export default function Home() {
+export default function Index() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout>
+      <Title title="Welcome to Linear" />
+      <Container maxWidth="md" className="MuiTypography-alignCenter">
+        <Box my={8}>
+          <Typography component="span" variant="subtitle1" color="primary">
+            INTRODUCING LINEAR
+          </Typography>
+          <Box my={2}>
+            <Typography component="span" variant="h4" color="textPrimary">
+              <b>The issue tracking tool you'll enjoy using</b>
+            </Typography>
+          </Box>
+          <Box my={3}>
+            <Typography component="span" variant="h6" color="textSecondary">
+              {`Linear helps streamline software projects, sprints, tasks, and
+              bug tracking. It's built for high-performance teams`}
+            </Typography>
+          </Box>
+          <Button color="primary" variant="contained" size="large">
+            <Box component="span" style={{textTransform: 'none'}} px={2}>
+              Sign up for free
+            </Box>
+            <ArrowForwardIcon />
+          </Button>
+        </Box>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <Box component="div" my={3}>
+          <div style={{border: '1px solid #513dd3', padding: '10px'}}>
+            <div style={{border: '1px solid #513dd3'}}>
+              <img src="/img/screenshot.jpg" style={{maxWidth: '100%'}} />
+            </div>
+          </div>
+        </Box>
+      </Container>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+      {/* Features section */}
+      <Features />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+      {/* Integrations section */}
+      <Integrations />
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+      {/* Testimonial section */}
+      <Testimonials />
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+      {/* CTA section */}
+      <Container maxWidth="md" className="MuiTypography-alignCenter">
+        <Box my={10}>
+          <LanguageIcon color="primary" style={{fontSize: 60}} />
+          <Box my={3}>
+            <Typography component="span" variant="h4" color="textPrimary">
+              <b>Get started with Linear today.</b>
+            </Typography>
+          </Box>
+          <Box my={3}>
+            <Typography component="span" variant="h6" color="textSecondary">
+              {`Linear keeps everyone aligned and working without friction.
+              Engineers, designers, and peers - all collaborating in one tool.`}
+            </Typography>
+          </Box>
+          <Button color="primary" variant="contained" size="large">
+            <Box component="span" px={2} style={{textTransform: 'none'}}>
+              Sign up for free
+            </Box>
+            <ArrowForwardIcon />
+          </Button>
+        </Box>
+      </Container>
+    </Layout>
+  );
 }
