@@ -23,7 +23,8 @@ export default function Footer({ links }) {
           <Grid container justify="center" alignItems="center">
             <Grid item xs={12} sm={10} md={4}>
               <Typography component="span" variant="subtitle1">
-                Linear.io - All rights reserved.
+                {new Date().getFullYear()}
+                {` Linear.io - All rights reserved`}
               </Typography>
             </Grid>
             <Grid item xs={12} sm={10} md={4}>
