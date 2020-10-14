@@ -1,5 +1,5 @@
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../src/Header';
+import Footer from '../src/Footer';
 
 const links = [
   {name: 'About us', to: '/about'},

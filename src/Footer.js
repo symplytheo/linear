@@ -1,7 +1,7 @@
 import { Button, Container, Grid, IconButton, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles"
 import { Facebook, Instagram, Twitter } from "@material-ui/icons";
-import Link from '../Link'
+import Link from './Link'
 
 const useStyles = makeStyles((theme) => ({
   paper: {

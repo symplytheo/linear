@@ -20,7 +20,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import { useState } from "react";
 import PropTypes from "prop-types";
-import Link from "../Link";
+import Link from "./Link";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
