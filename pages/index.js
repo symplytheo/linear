@@ -1,13 +1,13 @@
-import Layout from '../src/components/layout';
+import Layout from '../components/layout';
 import { Box, Button, Container, Typography } from '@material-ui/core';
 // Icons
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import LanguageIcon from '@material-ui/icons/Language'
 // Page Components
-import Title from '../src/components/Title.js';
-import Features from '../src/components/home/Features'
-import Testimonials from '../src/components/home/Testimonials.js'
-import Integrations from '../src/components/home/Integrations.js';
+import Title from '../src/Title.js';
+import Features from '../src/home/Features'
+import Testimonials from '../src/home/Testimonials.js'
+import Integrations from '../src/home/Integrations.js';
 
 export default function Index() {
   return (
